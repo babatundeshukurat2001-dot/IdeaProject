@@ -1,3 +1,4 @@
+
 public class Account {
 
     private int balance;
@@ -13,23 +14,25 @@ public class Account {
             balance += amount;
         }
     }
+
     public boolean withdraw(int amount, String inputPin) {
         if (!pin.equals(inputPin)) {
             return false;
         }
+
         if (amount > 0 && amount <= balance) {
             balance -= amount;
             return true;
         }
+
         return false;
     }
+
     public int getBalance(String inputPin) {
         if (!pin.equals(inputPin)) {
             return -1;
         }
+
         return balance;
     }
-
-
-
 }
